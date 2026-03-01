@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ========================================
+// Global Typography & Variables
+// ========================================
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Playfair Display', serif;
+$font-decorative: 'Cinzel', serif;
+
+$text-color: #ffffff;
+$bg-color: #1e1e1e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $bg-color;
+  color: $text-color;
+  cursor: url('./assets/images/cursor/pointer.png'), auto;
+  
+  // Performance optimizations
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// ========================================
+// Global Typography Classes
+// ========================================
+.font-primary { font-family: $font-primary; }
+.font-secondary { font-family: $font-secondary; }
+.font-decorative { font-family: $font-decorative; }
+
+// Optimize image rendering
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: optimizeQuality;
+}
+
+// Optimize animations for better performance
+* {
+  will-change: auto;
+}
+
+.markdown {
+  color: #dddddd;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: $font-primary;
+}
+
+.markdown code {
+  width: auto;
+  height: auto;
+  background: #48484869;
+  padding: 0 .2em;
+  margin: -.2em 0;
+  border-radius: 4px;
+  text-indent: 0;
+  white-space: pre-wrap;
+  border: 1px solid rgba(0, 0, 0, 0);
+  font-family: monospace;
+}
+
+.markdown blockquote {
+  border-left: 4px solid #3c3c3c;
+  padding-left: 12px;
+  margin: 0;
+  margin-top: -24px;
+  padding-top: 0;
+  white-space: pre-wrap;
+}
+
+.markdown blockquote+.markdown blockquote {
+  margin-top: 0;
+}
+
+.markdown blockquote:first-of-type {
+  margin-top: 3px;
+}
+
+.markdown a {
+  color: #42adf5;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+}
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+.markdown .d-emoji {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
